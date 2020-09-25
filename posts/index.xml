@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Hossein Zeinali</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 18 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://hosseinzeinali.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://hosseinzeinali.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ip to location</title>
+      <link>https://hosseinzeinali.github.io/posts/ip-to-location/</link>
+      <pubDate>Fri, 25 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hosseinzeinali.github.io/posts/ip-to-location/</guid>
+      <description>&lt;p&gt;I have developed a tool which i call it &lt;code&gt;ip2lo&lt;/code&gt; to make a database to map user ips to their location.
+Which can be used to recognize users coutryside by their ip address.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>compare php syntax with golang</title>
       <link>https://hosseinzeinali.github.io/posts/compare-php-syntax-with-golang/</link>

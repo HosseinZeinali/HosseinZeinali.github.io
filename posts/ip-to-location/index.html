@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no"/>
+
+    <title>ip to location | Hossein Zeinali</title>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#FF3DB4">
+    <meta name="theme-color" content="#ffffff">
+
+    
+    
+    
+    <link rel="stylesheet" href="https://hosseinzeinali.github.io/css/main.min.975b1911c008aee6ab5fb42e51274b8268ebcb65dc15bd4a5f69b9eedb485c3e.css"/>
+
+    
+    
+    
+
+    
+    
+ 
+    </head>
+
+    <body>
+        
+<nav>
+  <header>
+    <div class="site-title">
+        <a href="/">Hossein Zeinali</a>
+    </div>  
+</header>
+
+  <div class="nav-menu">
+  
+  <a class="color-link nav-link" href="https://hosseinzeinali.github.io/index.xml" target="_blank" rel="noopener" type="application/rss+xml">RSS</a>
+</div>
+<footer class="footer">
+	<div class="social-icons">
+        
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+</div>
+
+
+
+
+	<p><a href="https://github.com/kimcc/hugo-theme-noteworthy" target="_blank" rel="noopener">Noteworthy theme</a></p>
+	<p><a href="https://gohugo.io" target="_blank" rel="noopener">Built with Hugo</a></p>
+
+	<script src="https://hosseinzeinali.github.io/js/main.min.fa5c2b23e07b5d9bfad267a52b4b24fdb053e6fb7524993383594926a3ac270c.js" integrity="sha256-+lwrI+B7XZv60melK0sk/bBT5vt1JJkzg1lJJqOsJww=" crossorigin="anonymous"></script>
+</footer>
+</nav>
+
+        <div id="content" class="content-container">
+        
+
+<h1 class="post-title">ip to location</h1>
+    
+    <time>September 25, 2020</time>
+    
+    <div>
+        <p>
+        <p>I have developed a tool which i call it <code>ip2lo</code> to make a database to map user ips to their location.
+Which can be used to recognize users coutryside by their ip address.</p>
+<h2 id="why-i-have-made-ip2loc">Why i have made ip2loc?</h2>
+<p>I couldn&rsquo;t find any opensource standalone geolocating service, which is working, without using external apis,
+So I decided to make <code>ip2loc</code>. <code>ip2loc</code> updates the database automatically, archives the data, and also has a service based on http to get ip address details.</p>
+<h2 id="database">Database</h2>
+<p>We keep <code>ip_start</code>, <code>ip_end</code>, <code>ip_count</code>, <code>status</code>, <code>cc</code> in the database.
+ipv4 and ipv6 tables are separated and as we want to have archive the tables we make new tables and keep the old ones instead of updating it.</p>
+<h2 id="how-does-it-work">How does it work</h2>
+<p>This tool uses 5 Regional Internet Registrars (RIR) databases: AFRINIC, APNIC, ARIN, LACNIC and RIPE in order to make the database. So we need to have internet access to the below addresses to download the files:</p>
+<ul>
+<li><a href="https://ftp.afrinic.net/pub/stats/afrinic/delegated-afrinic-latest">https://ftp.afrinic.net/pub/stats/afrinic/delegated-afrinic-latest</a></li>
+<li><a href="https://ftp.lacnic.net/pub/stats/lacnic/delegated-lacnic-latest">https://ftp.lacnic.net/pub/stats/lacnic/delegated-lacnic-latest</a></li>
+<li><a href="https://ftp.arin.net/pub/stats/arin/delegated-arin-extended-latest">https://ftp.arin.net/pub/stats/arin/delegated-arin-extended-latest</a></li>
+<li><a href="https://ftp.apnic.net/pub/stats/apnic/delegated-apnic-latest">https://ftp.apnic.net/pub/stats/apnic/delegated-apnic-latest</a></li>
+<li><a href="https://ftp.ripe.net/ripe/stats/delegated-ripencc-latest">https://ftp.ripe.net/ripe/stats/delegated-ripencc-latest</a></li>
+</ul>
+<p>It checks the (RIR) database files checksum every 6 hours, if they have updated it downloads and parses the database files, transforms the data to our own data model and stores it to the database.</p>
+<p>We also have http endpoint to get the ip information by a simple http call.</p>
+<pre><code>GET http://localhost:8082/api/ip/{ip}
+</code></pre><p>You can get <code>ip2loc</code> from this repository on my github page:</p>
+<p><a href="https://github.com/HosseinZeinali/ip2loc">https://github.com/HosseinZeinali/ip2loc</a></p>
+        </p>
+    </div>
+    
+
+    
+
+    <div class="page-footer">
+        
+        <hr class="footer-divider">
+        
+            <a class="tag" href="/tags/golang">#golang</a>
+        
+            <a class="tag" href="/tags/ip-to-location">#ip to location</a>
+        
+            <a class="tag" href="/tags/ip-to-country-side">#ip to country side</a>
+        
+            <a class="tag" href="/tags/open-source">#open source</a>
+        
+      
+    </div>
+
+
+        
+        </div>
+        <footer class="footer-mobile">
+	<div class="social-icons">
+        
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+</div>
+
+
+
+
+	<div class="footer-mobile-links">
+		<p><a href="https://github.com/kimcc/hugo-theme-noteworthy" target="_blank" rel="noopener">Noteworthy theme</a></p>
+		<span class="divider-bar">|</span>
+		<p><a href="https://gohugo.io" target="_blank" rel="noopener">Built with Hugo</a></p>
+	</div>
+
+	<script src="https://hosseinzeinali.github.io/js/main.min.fa5c2b23e07b5d9bfad267a52b4b24fdb053e6fb7524993383594926a3ac270c.js" integrity="sha256-+lwrI+B7XZv60melK0sk/bBT5vt1JJkzg1lJJqOsJww=" crossorigin="anonymous"></script>
+</footer>
+    </body>
+</html>

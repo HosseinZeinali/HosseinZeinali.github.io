@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ip to location on Hossein Zeinali</title>
+    <link>https://hosseinzeinali.github.io/tags/ip-to-location/</link>
+    <description>Recent content in ip to location on Hossein Zeinali</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 25 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://hosseinzeinali.github.io/tags/ip-to-location/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ip to location</title>
+      <link>https://hosseinzeinali.github.io/posts/ip-to-location/</link>
+      <pubDate>Fri, 25 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hosseinzeinali.github.io/posts/ip-to-location/</guid>
+      <description>&lt;p&gt;I have developed a tool which i call it &lt;code&gt;ip2lo&lt;/code&gt; to make a database to map user ips to their location.
+Which can be used to recognize users coutryside by their ip address.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

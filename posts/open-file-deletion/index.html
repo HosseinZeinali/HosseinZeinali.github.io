@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no"/>
 
-    <title>Tags | Hossein Zeinali</title>
+    <title>Open File Deletion | Hossein Zeinali</title>
     
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -28,8 +28,6 @@
     
     
  
-    
-    <link rel="alternate" type="application/rss+xml" href="https://hosseinzeinali.github.io/tags/index.xml" title="Hossein Zeinali" />
     </head>
 
     <body>
@@ -116,24 +114,46 @@
         <div id="content" class="content-container">
         
 
-<h1>Tags</h1>
-<ul>
+<h1 class="post-title">Open File Deletion</h1>
     
-        <li><a href="https://hosseinzeinali.github.io/tags/golang/">golang</a> 2</li>
+    <time>November 8, 2020</time>
     
-        <li><a href="https://hosseinzeinali.github.io/tags/ip-to-country-side/">ip to country side</a> 1</li>
+    <div>
+        <p>
+        <p>Today i was checking my server&rsquo;s disk usage, and found something unusual.</p>
+<p>These are the result i got for <code>du</code>, and <code>df</code> commands.</p>
+<pre><code>sudo du -sh /
+18GB    /
+</code></pre><pre><code>sudo df –h /
+Filesystem     1K-blocks     Used       Available Use% Mounted on
+/dev/vda1      101445540     86231317   14234138  86%  /
+</code></pre><p><code>du</code> shows we have used 18GB of storage, in contrary <code>df</code> shows we have used nearly 86GB.
+I did some research, and found out <code>df</code> result is based on file system layer, and <code>du</code> result is based on file/directory layer.
+<!-- raw HTML omitted -->
+And this issue usually happens when we delete an open file, such as deleting a log file, when it is using by an application.
+<!-- raw HTML omitted -->
+We should kill the remained process to free up the filesystem usage and solve the problem.
+<!-- raw HTML omitted -->
+This is the command to get open deleted files</p>
+<pre><code>lsof -nP | grep '(deleted)'
+</code></pre><p>We should find large size files, from the result of <code>lsof</code> command and then simply kill the process.</p>
+<pre><code class="language-.env" data-lang=".env">sudo kill -9 $PID
+</code></pre><p>That&rsquo;s it. The issue is solved.</p>
+        </p>
+    </div>
     
-        <li><a href="https://hosseinzeinali.github.io/tags/ip-to-location/">ip to location</a> 1</li>
-    
-        <li><a href="https://hosseinzeinali.github.io/tags/linux/">linux</a> 1</li>
-    
-        <li><a href="https://hosseinzeinali.github.io/tags/open-source/">open source</a> 1</li>
-    
-        <li><a href="https://hosseinzeinali.github.io/tags/php/">php</a> 1</li>
-    
-</ul>
 
-<div class="page-footer"></div>
+    
+
+    <div class="page-footer">
+        
+        <hr class="footer-divider">
+        
+            <a class="tag" href="/tags/linux">#linux</a>
+        
+      
+    </div>
+
 
         
         </div>

@@ -129,7 +129,7 @@ The result i got from, <code>du</code> and <code>df</code> were not close to eac
 </code></pre><pre><code>sudo df –h /
 Filesystem     1K-blocks     Used       Available Use% Mounted on
 /dev/vda1      101445540     86231317   14234138  86%  /
-</code></pre><p><code>du</code> shows we have used 18GB of storage, in contrary <code>df</code> shows we have used nearly 86GB.
+</code></pre><p><code>du</code> shows we have used 18GB of storage, on the contrary <code>df</code> shows we have used nearly 86GB.
 I did some research, and found out <code>df</code> result is based on file system layer, and <code>du</code> result is based on file/directory layer.
 <!-- raw HTML omitted -->
 And this issue usually happens when we delete an open file, such as deleting a log file, when it is using by an application, and this is called &ldquo;Open file deletion&rdquo;.

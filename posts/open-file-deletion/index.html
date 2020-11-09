@@ -141,7 +141,7 @@ This is the command to get open deleted files</p>
 </code></pre><p>We should find large size files, from the result of <code>lsof</code> command.
 <!-- raw HTML omitted -->
 For example this is the process of &ldquo;deleted open file&rdquo; on my server:</p>
-<pre><code class="language-.env" data-lang=".env">php 23947 root 6w REG 252,1 66803307926 258226 /usr/share/nginx/html/var/log/prod.deprecations.log (deleted)
+<pre><code class="language-.env" data-lang=".env">php 23947 application 6w REG 252,1 66803307926 258226 /usr/share/nginx/html/var/log/prod.deprecations.log (deleted)
 </code></pre><p>And then we will kill the process by this command. In my case the $PID was 23947.</p>
 <pre><code class="language-.env" data-lang=".env">sudo kill -9 $PID
 </code></pre><p>That&rsquo;s it.</p>

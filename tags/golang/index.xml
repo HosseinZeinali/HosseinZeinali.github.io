@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>golang on Hossein Zeinali</title>
-    <link>https://hosseinzeinali.github.io/tags/golang/</link>
+    <link>https://zeina1i.github.io/tags/golang/</link>
     <description>Recent content in golang on Hossein Zeinali</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 25 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://hosseinzeinali.github.io/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://zeina1i.github.io/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ip to location</title>
-      <link>https://hosseinzeinali.github.io/posts/ip-to-location/</link>
+      <link>https://zeina1i.github.io/posts/ip-to-location/</link>
       <pubDate>Fri, 25 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://hosseinzeinali.github.io/posts/ip-to-location/</guid>
+      <guid>https://zeina1i.github.io/posts/ip-to-location/</guid>
       <description>&lt;p&gt;I have developed a tool which i call it &lt;code&gt;ip2loc&lt;/code&gt; to make a database that maps user ips to their location.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>compare php syntax with golang</title>
-      <link>https://hosseinzeinali.github.io/posts/compare-php-syntax-with-golang/</link>
+      <link>https://zeina1i.github.io/posts/compare-php-syntax-with-golang/</link>
       <pubDate>Sat, 18 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://hosseinzeinali.github.io/posts/compare-php-syntax-with-golang/</guid>
+      <guid>https://zeina1i.github.io/posts/compare-php-syntax-with-golang/</guid>
       <description>&lt;p&gt;In this article i&amp;rsquo;m going to compare php syntax with golang. by showing how loops, making objects, lists
 are used in both of them.
 &lt;!-- raw HTML omitted --&gt;
